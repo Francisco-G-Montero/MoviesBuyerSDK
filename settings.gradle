@@ -9,3 +9,4 @@ dependencyResolutionManagement {
 rootProject.name = "SDKPractice"
 include ':app'
 include ':MoviesBuyer'
+include ':Library'
