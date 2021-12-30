@@ -4,7 +4,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.frommetoyou.moviesbuyer.R
 import com.frommetoyou.moviesbuyer.data.model.comics.Comic
-import com.frommetoyou.moviesbuyer.databinding.FragmentMainBinding
+import com.frommetoyou.moviesbuyer.databinding.FragmentMoviesBinding
 import com.frommetoyou.moviesbuyer.presentation.ui.adapters.ComicAdapter
 import com.frommetoyou.moviesbuyer.presentation.ui.adapters.OnClickListener
 import com.frommetoyou.moviesbuyer.presentation.ui.uimodel.MainFragmentUiModel
@@ -16,7 +16,7 @@ import kotlinx.coroutines.InternalCoroutinesApi
 @ExperimentalCoroutinesApi
 @InternalCoroutinesApi
 @AndroidEntryPoint
-class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>(), OnClickListener {
+class MoviesFragment : BaseFragment<FragmentMoviesBinding, MainFragmentViewModel>(), OnClickListener {
     //TODO eliminar clase example ↑
     override val mViewModel: MainFragmentViewModel by viewModels()
     override val layoutId: Int
