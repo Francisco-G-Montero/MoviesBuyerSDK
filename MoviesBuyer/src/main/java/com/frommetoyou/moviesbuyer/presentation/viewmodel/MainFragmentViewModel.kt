@@ -16,11 +16,13 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import com.frommetoyou.moviesbuyer.data.util.Result
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import javax.inject.Named
 
 @ExperimentalCoroutinesApi
 @InternalCoroutinesApi
 @HiltViewModel
 class MainFragmentViewModel @Inject constructor(
+    @Named("provideMoviesCoroutinesDispatchers")
     private val coroutinesDispatchers: CoroutinesDispatcherProvider,
     private val getComicsUseCase: GetComicsUseCase
 ) : BaseViewModel() {

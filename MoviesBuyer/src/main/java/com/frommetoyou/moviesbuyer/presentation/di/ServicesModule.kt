@@ -9,6 +9,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Named
 import javax.inject.Singleton
 
 private const val DEV_URL  = "https://gateway.marvel.com/v1/"
@@ -19,7 +20,7 @@ const val BASE_URL = DEV_URL
 class ServicesModule {
     @Singleton
     @Provides
-    fun provideComicAPI(httpClient: OkHttpClient): ComicApiService {
+    fun provideComicAPI(@Named("MoviesOkHttpClient") httpClient: OkHttpClient): ComicApiService {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(httpClient)
@@ -28,6 +29,7 @@ class ServicesModule {
             .create(ComicApiService::class.java)
     }
 
+    @Named("MoviesOkHttpClient")
     @Singleton
     @Provides
     fun provideMoviesOkHttpClient(): OkHttpClient {

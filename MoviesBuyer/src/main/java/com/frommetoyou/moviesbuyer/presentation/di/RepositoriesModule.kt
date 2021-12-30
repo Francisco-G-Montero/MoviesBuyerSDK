@@ -9,6 +9,9 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import javax.inject.Inject
+import javax.inject.Named
+import javax.inject.Qualifier
 import javax.inject.Singleton
 
 @ExperimentalCoroutinesApi
@@ -20,6 +23,7 @@ class RepositoriesModule {
     @Provides
     fun provideMoviesComicRepository(
         comicApiService: ComicApiService,
+        @Named("provideMoviesCoroutinesDispatchers")
         coroutinesDispatcherProvider: CoroutinesDispatcherProvider
     ): ComicRepository {
         return ComicRepositoryImpl(comicApiService, coroutinesDispatcherProvider)
