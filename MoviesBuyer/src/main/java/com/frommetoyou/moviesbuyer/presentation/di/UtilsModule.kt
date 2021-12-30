@@ -15,7 +15,7 @@ private const val DAIANA_DATABASE = "DaianaDatabase"
 class WrappersModule {
     @Singleton
     @Provides
-    fun provideCoroutinesDispatchers(): CoroutinesDispatcherProvider {
+    fun provideMoviesCoroutinesDispatchers(): CoroutinesDispatcherProvider {
         return CoroutinesDispatcherProvider()
     }
 }

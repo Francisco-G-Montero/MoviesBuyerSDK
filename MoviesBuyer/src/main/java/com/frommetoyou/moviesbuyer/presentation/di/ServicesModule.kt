@@ -19,7 +19,7 @@ const val BASE_URL = DEV_URL
 class ServicesModule {
     @Singleton
     @Provides
-    fun provideLoginAPI(httpClient: OkHttpClient): ComicApiService {
+    fun provideComicAPI(httpClient: OkHttpClient): ComicApiService {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(httpClient)
@@ -30,7 +30,7 @@ class ServicesModule {
 
     @Singleton
     @Provides
-    fun provideOkHttpClient(): OkHttpClient {
+    fun provideMoviesOkHttpClient(): OkHttpClient {
         val interceptor = HttpLoggingInterceptor()
         val loggingInterceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY

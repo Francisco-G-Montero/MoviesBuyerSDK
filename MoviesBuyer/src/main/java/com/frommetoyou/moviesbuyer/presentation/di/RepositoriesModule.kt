@@ -18,7 +18,7 @@ class RepositoriesModule {
     @ExperimentalCoroutinesApi
     @Singleton
     @Provides
-    fun provideLoginRepository(
+    fun provideMoviesComicRepository(
         comicApiService: ComicApiService,
         coroutinesDispatcherProvider: CoroutinesDispatcherProvider
     ): ComicRepository {
