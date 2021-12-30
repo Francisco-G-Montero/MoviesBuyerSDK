@@ -20,7 +20,7 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>(),
     //TODO eliminar clase example ↑
     override val mViewModel: MainFragmentViewModel by viewModels()
     override val layoutId: Int
-        get() = R.layout.fragment_main
+        get() = R.layout.fragment_movies
     private var comicAdapter: ComicAdapter? = null
 
     private val uiModelObserver = Observer<MainFragmentUiModel> {
