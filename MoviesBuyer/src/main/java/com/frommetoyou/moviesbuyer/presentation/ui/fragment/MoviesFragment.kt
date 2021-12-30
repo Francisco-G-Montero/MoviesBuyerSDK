@@ -1,5 +1,7 @@
 package com.frommetoyou.moviesbuyer.presentation.ui.fragment
 
+import android.app.Activity
+import android.content.Intent
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.frommetoyou.moviesbuyer.R
@@ -55,6 +57,8 @@ class MoviesFragment : BaseFragment<FragmentMoviesBinding, MainFragmentViewModel
     }
 
     override fun onItemClick(comic: Comic) {
-        showMessage("COMPRADO: ${comic.title}")
+        val data = Intent()
+        data.putExtra("comic", "Felicidades, usted ha comprado: ${comic.title}")
+        requireActivity().setResult(Activity.RESULT_OK, data)
     }
 }
