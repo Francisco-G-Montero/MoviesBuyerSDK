@@ -31,16 +31,6 @@ android {
     }
 }
 
-if (android.publishNonDefault && variant.name == android.defaultPublishConfig) {
-    def bundleTask = tasks["bundle${name.capitalize()}"]
-    artifacts {
-        archives(bundleTask.archivePath) {
-            classifier null
-            builtBy bundleTask
-        }
-    }
-}
-
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
