@@ -1,10 +1,12 @@
 package com.frommetoyou.moviesbuyer.presentation.util
 
 import android.content.Context
-import com.frommetoyou.moviesbuyer.presentation.ui.activity.MainActivity
+import com.frommetoyou.moviesbuyer.presentation.ui.activity.MoviesBuyerActivity
 
 class MoviesBuyer {
-    fun startPurchase(context: Context){
-        context.startActivity(MainActivity.getIntent(context))
+    companion object{
+        fun startPurchase(context: Context){
+            context.startActivity(MoviesBuyerActivity.getIntent(context))
+        }
     }
 }

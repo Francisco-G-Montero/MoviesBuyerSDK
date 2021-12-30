@@ -6,7 +6,7 @@
 
     <application>
         <activity
-            android:name="com.frommetoyou.moviesbuyer.presentation.ui.activity.MainActivity"
+            android:name="com.frommetoyou.moviesbuyer.presentation.ui.activity.MoviesBuyerActivity"
             android:theme="@style/Theme.MoviesBuyer" />
     </application>
 </manifest>
