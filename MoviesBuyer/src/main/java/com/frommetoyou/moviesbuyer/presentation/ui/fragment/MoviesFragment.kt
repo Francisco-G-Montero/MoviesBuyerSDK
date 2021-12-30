@@ -60,5 +60,6 @@ class MoviesFragment : BaseFragment<FragmentMoviesBinding, MainFragmentViewModel
         val data = Intent()
         data.putExtra("comic", "Felicidades, usted ha comprado: ${comic.title}")
         requireActivity().setResult(Activity.RESULT_OK, data)
+        requireActivity().finish()
     }
 }

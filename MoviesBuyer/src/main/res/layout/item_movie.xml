@@ -7,6 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_padding_min"
+        android:theme="@style/Theme.MoviesBuyer"
         app:cardCornerRadius="@dimen/character_card_radius">
 
         <androidx.constraintlayout.widget.ConstraintLayout
