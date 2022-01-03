@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.MoviesBuyer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
-        <item name="colorOnPrimary">@color/primaryTextColor</item>
+        <item name="colorPrimary">@color/moviesPrimaryColor</item>
+        <item name="colorPrimaryVariant">@color/moviesPrimaryDarkColor</item>
+        <item name="colorOnPrimary">@color/moviesPrimaryTextColor</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>

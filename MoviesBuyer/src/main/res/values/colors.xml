@@ -11,9 +11,9 @@
     <color name="character_description">#222053</color>
     <color name="background_color">#ECEFF1</color>
 
-    <color name="primaryColor">#262626</color>
-    <color name="primaryLightColor">#4e4e4e</color>
-    <color name="primaryDarkColor">#000000</color>
-    <color name="primaryTextColor">#ffffff</color>
-    <color name="divider">#E4E4E4</color>
+    <color name="moviesPrimaryColor">#262626</color>
+    <color name="moviesPrimaryLightColor">#4e4e4e</color>
+    <color name="moviesPrimaryDarkColor">#000000</color>
+    <color name="moviesPrimaryTextColor">#ffffff</color>
+    <color name="moviesDivider">#E4E4E4</color>
 </resources>
