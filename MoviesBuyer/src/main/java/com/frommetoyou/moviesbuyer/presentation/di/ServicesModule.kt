@@ -12,6 +12,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Named
 import javax.inject.Singleton
 
+private const val NAMED_MOVIES_HTTP_CLIENT  = "MoviesOkHttpClient"
+
 private const val DEV_URL  = "https://gateway.marvel.com/v1/"
 const val BASE_URL = DEV_URL
 
@@ -20,7 +22,7 @@ const val BASE_URL = DEV_URL
 class ServicesModule {
     @Singleton
     @Provides
-    fun provideComicAPI(@Named("MoviesOkHttpClient") httpClient: OkHttpClient): ComicApiService {
+    fun provideComicAPI(@Named(NAMED_MOVIES_HTTP_CLIENT) httpClient: OkHttpClient): ComicApiService {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(httpClient)
@@ -29,7 +31,7 @@ class ServicesModule {
             .create(ComicApiService::class.java)
     }
 
-    @Named("MoviesOkHttpClient")
+    @Named(NAMED_MOVIES_HTTP_CLIENT)
     @Singleton
     @Provides
     fun provideMoviesOkHttpClient(): OkHttpClient {
